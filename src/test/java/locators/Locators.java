@@ -34,13 +34,10 @@ public class Locators {
             "]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/" +
             "android.widget.EditText";
 
-    public static String firstItem_Xpath = "//android.view.View[@content-desc=\"LACKÖ table, grey 70 cm 399\"]/android.view.View[2]";
+    public static String firstItem_Xpath = "(//android.view.View/android.view.View[2]/android.view.View[1])[2]";
+    public static String firstItemPrice_Xpath = "(//android.view.View/android.view.View[2]/android.widget.TextView[2])[1]";
 
-    public static String firstItemPrice_Xpath = "//android.view.View[@content-desc=\"LACKÖ table, grey 70 cm 399\"]/android.view" +
-            ".View[2]/android.widget.TextView[2]";
-
-    public static String firstItemName_Xpath = "//android.view.View[@content-desc=\"LACKÖ table, grey 70 cm 399\"]/android." +
-            "view.View[2]/android.view.View[1]";
+    public static String firstItemName_Xpath = "(//android.view.View/android.view.View[2]/android.view.View[1])[2]";
 
     public static String itemPriceMain_Xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget" +
             ".FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android." +

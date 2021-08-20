@@ -1,9 +1,8 @@
 package tests;
 
 import com.google.common.collect.ImmutableMap;
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,11 +10,11 @@ import pages.*;
 
 public class Test_Remove_From_Cart extends Base{
 
-    @Test(priority = 2)
-    @Severity(SeverityLevel.NORMAL)
-    @Description(" add two quantities of a product to cart and remove from cart while checkout")
+
+    @Test
     public void add_two_quantities_of_a_product_to_cart_and_remove_from_cart_while_checkout()
     {
+        test =  extent.startTest("add_two_quantities_of_a_product_to_cart_and_remove_from_cart_while_checkout");
         WebDriverWait wait = new WebDriverWait(appiumDriver, 50);
 
         // Click on the allow access location
@@ -77,5 +76,8 @@ public class Test_Remove_From_Cart extends Base{
         String emptyMessage = CheckoutPage.getEmptyMessage(wait);
         Assert.assertEquals(emptyMessage, "There are no items in your basket!",
                 "Empty message is incorrect!");
+
+        test.log(LogStatus.PASS, "Test is passed");
+
     }
 }
